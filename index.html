@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="parkingcharge.css">
+</head>
+<body>
+     <div>
+            <h1>ORION AVENUE</h1>
+            <H2 id="h2">Parking prices</H2>
+            <hr>
+            <h3 style="color: rgb(47, 10, 212);">Parking price hourly wise:</h3>
+            <pre ><b>         1hr                =&#x20B9;20 
+         Above 1hr to 3hr   =&#x20B9;40 
+         Above 3hr to 5hr   =&#x20B9;60 
+         Above 5hr          =&#x20B9;80 </b>
+             </pre>
+             <hr>
+
+            <label for="input" >Enter No.Of Hours</label>
+            <input type="text" id="input"><br><br><br>
+            <button type="button" onclick="display()">Calculate</button>
+            <h2 id="output" style="position: absolute;">Your parking fare:</h2><br><br><br><br>
+            <hr>
+            <h3 style="margin-left: 110px;color: rgb(235, 124, 26);">Thank You </h3>
+            <h2 style="margin-left: 100px;color:rgba(109, 100, 230, 0.907);text-decoration:wavy;">Visit Again</h2>
+            
+     </div>
+    
+    <script>
+        function display(){
+            let a="Your parking fare:&#x20B9;"
+            let input=document.querySelector("#input").value;
+            let output=document.querySelector("#output")
+             
+             if (input==1)
+             output.innerHTML=a+20
+             else if (input>1 && input<=3)
+             output.innerHTML=a+40
+             else if (input>3 && input<=5)
+             output.innerHTML=a+60
+             else if(input<=0)
+             output.innerHTML="you dont have to pay"
+             else
+             output.innerHTML=a+80
+             
+        }
+    </script>
+</body>
+</html>
